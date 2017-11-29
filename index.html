@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Masters of Sprinting</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.0.1.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="anime.min.js"></script>
+    <script type="text/javascript" src="anim.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="map.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="model.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="hover.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- hero -->
+    <div class="hero">
+        <div id="player"></div>
+        <h2 class="revealUp"><span style="font-size: 48px;">Masters of</span><br> Sprinting</h2>
+        <img src="img/scrolldown.png">
+    </div>
+
+    <div class="vertical-line">
+        <p>The cheetah is the world's fastest land mammal. With acceleration that would leave most automobiles in the dust, a cheetah can go from 0 to 60 miles an hour in only three seconds. These big cats are quite nimble at high speed and can make quick and sudden turns in pursuit of prey.</p>
+    </div>
+
+    <!-- model -->
+    <div class="model-container">
+        <div class="model">
+            <iframe src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+
+        <div class="aInfo">
+            <!-- tear marks -->
+            <div class="aInfoC inactive" id="aInfo-0">
+                <img src="img/close.png" class="closeIcon">
+                <div class="row" id="aInfo-0-content">
+                    <div class="col-md-6" style="padding: 0 0 0 4%;">
+                        <h3>Tear Marks</h3>
+                        <p>Cheetahs' tear marks help reflect the glare of the sun when they are hunting during the day, just like the black marks that football players put under their eyes. These marks also work like the sights on a rifle, to help the cheetah “aim” and stay focused on their prey when they are hunting.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img id="tearImg" src="img/tear.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- claws -->
+            <div class="aInfoC inactive" id="aInfo-2">
+                <img src="img/close.png" class="closeIcon">
+                <div class="row" id="aInfo-0-content">
+                    <div class="col-md-6" style="padding: 0 0 0 4%;">
+                        <h3>Claws</h3>
+                        <p>The cheetah has “semi non-retractable” claws (almost like dog claws) that work like the cleats on a football shoe to give the cheetah a lot of traction when running. The pads of most cats’ paws are soft, but the cheetah’s pads are hard kind of like the rubber on a tire. This also helps them grip the ground when they are running so fast.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img id="tearImg" src="img/claw.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- Tail -->
+            <div class="aInfoC inactive" id="aInfo-1">
+                <img src="img/close.png" class="closeIcon">
+                <div class="row align-items-center" id="aInfo-0-content">
+                    <div class="col-md-4" style="padding: 0 0 0 4%;">
+                        <h3>Tail</h3>
+                        <p>The cheetah has a long, muscular tail that has a flat shape. The tail almost functions like a rudder on a boat because they use it to help control their steering and keep their balance when running very fast.</p>
+                    </div>
+                    <div class="col-md-8">
+                        <img id="tearImg" src="https://media.giphy.com/media/3o6fJ9Dncos9HcpkVa/giphy.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- statement -->
+    <div class="statement">
+        <h3 class="verticalCenter">As of 2016, there are approximately <span>10000</span> Cheetahs live on earth. Most of them live in <span>Africa</span>.</h4>
+        </div>
+
+        <!-- map -->
+        <div class="map">
+            <!-- <img src="img/maps.png"> -->
+            <p id="report"></p>
+            <div id="map"></div>
+        </div>
+
+        <!-- statistics -->
+        <div class="container-fluid">
+            <div class="statistics row align-items-center">
+                <div class="statName">
+                    <ul>
+                      <li><label><input type="radio" name="stat" value="0" checked="true"><span>Curb Mortality Rate</span></label></li>
+                      <li><label><input type="radio" name="stat" value="1"><span>Life Span</span></label></li>
+                  </ul>
+              </div>
+              <div class="text-center" id="statContent">
+                <img src="img/data.png" class="img-fluid">
+                <!-- curb -->
+                <div class="statText" id="stat-0">
+                <div class="statReveal">
+                    <!-- <h1><span class="numerical">95</span>%</h1> -->
+                    <h1 class="numerical">95%</h1>
+                    <p>would die before maturity. Most killed by larger predators, such as Lions.</p>
+                </div>
+                </div>
+                <!-- life span -->
+                <div class="statText" id="stat-1">
+                    <!-- <h1><span class="numerical">95</span>%</h1> -->
+                    <h2>10 - 12<br>
+                        <span style="color: #A71E1E;">Years</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

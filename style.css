@@ -1,0 +1,292 @@
+html {font-size: 1.125em;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2C2E31;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.45;
+}
+
+@media (min-width: 400px) {
+    p {margin-bottom: 1.3em;}
+
+    .hero h2 {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        font-size: 72px;
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 6.854em;
+    }
+
+    h2 {font-size: 4.236em;}
+
+    h3 {font-size: 2.618em;}
+
+    h4 {font-size: 1.618em;}
+}
+
+@media (max-width: 400px) {
+    p {
+        margin-bottom: 1.3em;
+        font-size: small;
+    }
+
+    .hero h2{
+        left: 5%;
+        position: absolute;
+        bottom: 10%;
+        font-size: 72px;
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 3.236em;
+    }
+
+    h2 {font-size: 1.618em;}
+
+    h3 {font-size: 1.618em;}
+
+    h4 {font-size: 1.125em;}
+}
+
+h1, h2, h3, h4 {
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+small, .font_small {font-size: 0.618em;}
+
+#player {
+    top: 0;
+    left: 0;
+    z-index: -100;
+    width: 100%;
+    overflow: auto;
+    margin: auto;
+}
+
+@media (min-width: 400px) {
+
+}
+
+.hero img {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 6%;
+    height: auto;
+}
+
+.vertical-line {
+    border-left: 2px solid #fff;
+    margin: 40px 20%;
+    padding-left: 20px;
+}
+
+.model-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.model {
+    margin: -50px 0;
+}
+
+.model iframe {
+    width: 100%;
+    height: 90vh;
+    border-width: 0px;
+    z-index: 0;
+}
+
+.active {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+.inactive {
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.aInfo {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    z-index: -100;
+    bottom: 10%;
+    right: 10%;
+    overflow: hidden;
+}
+
+.aInfoC {
+    position: absolute;
+    top: 0;
+}
+
+.closeIcon {
+    align-items: center;
+    display: block;
+    margin: 1% auto;
+    width: 40px;
+    height: auto;
+    transition: transform 200ms;
+}
+
+.closeIcon:hover {
+    opacity: .7;
+    transform: rotate(90deg);
+    transition: transform 200ms;
+}
+
+#aInfo-0-content {
+    align-items: flex-start;
+    background-color: rgba(0,0,0,.6);
+}
+
+#tearImg {
+    /*height: 100%;*/
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.statement {
+    position: relative;
+    height: 90vh;
+}
+
+
+.statement span {
+    color: #A71E1E;
+    font-weight: 700;
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+}
+
+.statistics {
+    margin: 100px 40px 20px;
+    height: 100vh;
+}
+
+.statistics input[type=radio] {
+    display: none;
+}
+
+.statistics input[type=radio] + span {
+    color: #fff;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.statistics input[type=radio]:checked + span {
+    color: #fff;
+    opacity: 1;
+    position: relative;
+    white-space: nowrap;
+    -webkit-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    cursor: default;
+}
+
+.statistics input[type=radio]:checked + span::after {
+    position: absolute;
+    display: block;
+    content: '';
+    left: -5%;
+    width: 110%;
+    height: .2em;
+    border-radius: .05em;
+    background-color: #A71E1E;
+    cursor: default;
+}
+
+.statistics ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+.statName {
+    /*display: inline-block;*/
+    /*width: 720px;*/
+    margin: 0 auto;
+}
+
+.statistics li{
+    margin: 20px 0;
+}
+
+.verticalCenter{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    margin: auto;
+    padding: 10px 10px;
+}
+
+#statContent {
+    position: relative;
+    /*display: inline-block;*/
+    margin: 0 auto;
+}
+
+/*#statContent img {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}*/
+
+.statText{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20%;
+    width: 60%;
+    overflow: hidden;
+}
+
+.statText h1 {
+    margin: auto;
+}
+
+.statText p {
+    color: #A71E1E;
+    margin: 0px;
+    font-weight: 600;
+}
+
+.statText {
+    display: block;
+    opacity: 1;
+    -webkit-animation: display-none-transition 500ms both;
+    animation: display-none-transition 500ms both;
+}
+
+@-webkit-keyframes display-none-transition {
+    0% {
+        opacity: 0;
+    }
+}
+@keyframes display-none-transition {
+    0% {
+        opacity: 0;
+    }
+}
+
+#stat-1 h2 {
+    margin: 0;
+}
