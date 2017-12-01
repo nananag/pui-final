@@ -74,9 +74,7 @@ small, .font_small {font-size: 0.618em;}
     margin: auto;
 }
 
-@media (min-width: 400px) {
-
-}
+/*loader*/
 
 .loader {
     background-color: #000;
@@ -92,6 +90,76 @@ small, .font_small {font-size: 0.618em;}
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.blob {
+  background: black;
+  -webkit-filter: brightness(1) contrast(40);
+          filter: brightness(1) contrast(40);
+  overflow: hidden;
+  padding: 20px;
+}
+.blob > div {
+  -webkit-filter: blur(18px);
+          filter: blur(18px);
+}
+.blob > div > div,
+.blob > div > div:after,
+.blob > div > div:before {
+  width: 75px;
+  height: 75px;
+  margin: 2px;
+  position: relative;
+  background: white;
+  display: inline-block;
+  -webkit-animation: rotateAntiTrigo 3s linear infinite;
+          animation: rotateAntiTrigo 3s linear infinite;
+}
+.blob > div > div:before,
+.blob > div > div:after:before,
+.blob > div > div:before:before {
+  content: "";
+  position: absolute;
+  margin: 3px;
+  -webkit-animation: rotateTrigo 2.5s linear infinite;
+          animation: rotateTrigo 2.5s linear infinite;
+}
+.blob > div > div:after,
+.blob > div > div:after:after,
+.blob > div > div:before:after {
+  content: "";
+  position: absolute;
+  margin: 1px;
+  -webkit-animation: rotateTrigo 2.8s linear infinite;
+          animation: rotateTrigo 2.8s linear infinite;
+}
+
+@-webkit-keyframes rotateTrigo {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateTrigo {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotateAntiTrigo {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes rotateAntiTrigo {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+/*hero*/
 
 .hero img {
     position: absolute;

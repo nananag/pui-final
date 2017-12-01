@@ -21,6 +21,7 @@ $(document).ready(function(){
 
                 console.log( 'Viewer is ready' );
                 $('.loader').addClass("inactive");
+                $('.loader').css("z-index", "-100");
                 loadAnimation();
             });
         },
