@@ -10,9 +10,6 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="anime.min.js"></script>
     <script type="text/javascript" src="anim.js"></script>
-    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
-    <!-- <script type="text/javascript" src="https://d3js.org/topojson.v1.min.js"></script> -->
-    <!-- <script src="map.js"></script> -->
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="model.js"></script>
     <!-- css -->
@@ -21,6 +18,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <!-- loader -->
+    <div class="loader">
+        <div class="loadGIF"></div>
+    </div>
+
     <!-- hero -->
     <div class="hero">
         <div id="player"></div>
@@ -42,39 +44,39 @@
             <!-- tear marks -->
             <div class="aInfoC inactive" id="aInfo-0">
                 <img src="img/close.png" class="closeIcon">
-                <div class="row" id="aInfo-0-content">
+                <div class="row marginZero" id="aInfo-0-content">
                     <div class="col-md-6" style="padding: 0 0 0 4%;">
                         <h3>Tear Marks</h3>
                         <p>Cheetahs' tear marks help reflect the glare of the sun when they are hunting during the day, just like the black marks that football players put under their eyes. These marks also work like the sights on a rifle, to help the cheetah “aim” and stay focused on their prey when they are hunting.</p>
                     </div>
                     <div class="col-md-6">
-                        <img id="tearImg" src="img/tear.jpg">
+                        <img class="aInfoImg" src="img/tear.jpg">
                     </div>
                 </div>
             </div>
             <!-- claws -->
             <div class="aInfoC inactive" id="aInfo-2">
                 <img src="img/close.png" class="closeIcon">
-                <div class="row" id="aInfo-0-content">
+                <div class="row marginZero" id="aInfo-0-content">
                     <div class="col-md-6" style="padding: 0 0 0 4%;">
                         <h3>Claws</h3>
                         <p>The cheetah has “semi non-retractable” claws (almost like dog claws) that work like the cleats on a football shoe to give the cheetah a lot of traction when running. The pads of most cats’ paws are soft, but the cheetah’s pads are hard kind of like the rubber on a tire. This also helps them grip the ground when they are running so fast.</p>
                     </div>
                     <div class="col-md-6">
-                        <img id="tearImg" src="img/claw.jpg">
+                        <img class="aInfoImg" src="img/claw.jpg">
                     </div>
                 </div>
             </div>
             <!-- Tail -->
             <div class="aInfoC inactive" id="aInfo-1">
                 <img src="img/close.png" class="closeIcon">
-                <div class="row align-items-center" id="aInfo-0-content">
+                <div class="row align-items-center marginZero" id="aInfo-0-content">
                     <div class="col-md-4" style="padding: 0 0 0 4%;">
                         <h3>Tail</h3>
                         <p>The cheetah has a long, muscular tail that has a flat shape. The tail almost functions like a rudder on a boat because they use it to help control their steering and keep their balance when running very fast.</p>
                     </div>
                     <div class="col-md-8">
-                        <img id="tearImg" src="https://media.giphy.com/media/3o6fJ9Dncos9HcpkVa/giphy.gif">
+                        <img class="aInfoImg" id="tailImg" src="https://media.giphy.com/media/3o6fJ9Dncos9HcpkVa/giphy.gif">
                     </div>
                 </div>
             </div>

@@ -78,6 +78,21 @@ small, .font_small {font-size: 0.618em;}
 
 }
 
+.loader {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.loadGIF {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .hero img {
     position: absolute;
     bottom: 5%;
@@ -122,9 +137,9 @@ small, .font_small {font-size: 0.618em;}
 .aInfo {
     position: absolute;
     width: 80%;
-    height: 90%;
+    height: 100%;
     z-index: -100;
-    bottom: 10%;
+    bottom: 0;
     right: 10%;
     overflow: hidden;
 }
@@ -150,15 +165,37 @@ small, .font_small {font-size: 0.618em;}
 }
 
 #aInfo-0-content {
-    align-items: flex-start;
     background-color: rgba(0,0,0,.6);
+    min-height: -webkit-fill-available;
 }
 
-#tearImg {
+.marginZero{
+    margin: auto;
+}
+
+.aInfoImg {
     /*height: 100%;*/
     max-width: 100%;
     margin: 0 auto;
     display: block;
+}
+
+@media (min-width: 320px){
+    #tailImg{
+        min-width: 200px;
+    }
+}
+
+@media (min-width: 1300px){
+    #tailImg{
+        min-width: 700px;
+    }
+}
+
+@media (min-width: 1900px){
+    #tailImg{
+        min-width: 1000px;
+    }
 }
 
 .statement {
@@ -172,10 +209,6 @@ small, .font_small {font-size: 0.618em;}
     font-weight: 700;
 }
 
-.map img {
-    width: 100%;
-    height: auto;
-}
 
 .statistics {
     margin: 100px 40px 20px;

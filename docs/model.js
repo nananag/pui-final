@@ -11,17 +11,18 @@ $(document).ready(function(){
             api.start();
             api.addEventListener( 'viewerready', function() {
             // API is ready to use
-            // Insert your code here
-            api.addEventListener( 'annotationFocus', function( index ) {
-                console.log( 'Reached annotation ' + index );
-                var current = "#aInfo-" + index;
-                $(current).removeClass("inactive");
-                $(current).addClass("active");
-                $('.aInfo').css("z-index", "1");
-            } );
+                api.addEventListener( 'annotationFocus', function( index ) {
+                    console.log( 'Reached annotation ' + index );
+                    var current = "#aInfo-" + index;
+                    $(current).removeClass("inactive");
+                    $(current).addClass("active");
+                    $('.aInfo').css("z-index", "1");
+                } );
 
-            console.log( 'Viewer is ready' );
-        } );
+                console.log( 'Viewer is ready' );
+                $('.loader').addClass("inactive");
+                loadAnimation();
+            });
         },
         error: function onError() {
             console.log( 'Viewer error' );

@@ -1,6 +1,6 @@
-$(document).ready(function(){
+function loadAnimation() {
     ////////////// statistics /////////////////////
-    window.sr = ScrollReveal({ reset: true });
+    sr = ScrollReveal({ reset: true });
     sr.reveal('.revealUp',{
         duration: 600,
         scale: 1,
@@ -51,4 +51,4 @@ $(document).ready(function(){
         var current = "#stat-" + this.value;
         $(current).show();
     });
-});
+}

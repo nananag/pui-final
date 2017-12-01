@@ -33,11 +33,16 @@
     function onPlayerReady(){
         tv.loadVideoById(vid);
         tv.mute();
+        console.log("video is ready");
     }
 
     function onStateChange(e){
         if(e.data === YT.PlayerState.ENDED){
             tv.playVideo();
+        }
+
+        if(e.data === YT.PlayerState.PLAYING){
+            console.log("video playing");
         }
     }
 
